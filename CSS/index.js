@@ -6,22 +6,22 @@ const imgFeliz = document.querySelector(".feliz");
 const imgSerio = document.querySelector(".serio");
 
 
-btns.forEach((btn) =>{
+btns.forEach((btn) => {
 
-    btn.addEventListener("click", (event)=>{
+    btn.addEventListener("click", (event) => {
         const styles = event.currentTarget.classList;
         if (styles.contains("btn-danger")) {
             num--;
-          } else if (styles.contains("btn-success")) {
+        } else if (styles.contains("btn-success")) {
             num++;
-          } else {
+        } else {
             num = 0;
-          }
+        }
 
-          value.textContent = num;
-          
+        value.textContent = num;
 
-          if (num > 0) {
+
+        if (num > 0) {
             value.style.color = "green";
             imgFeliz.classList.add("active");
             imgFeliz.classList.remove("hidden");
@@ -31,8 +31,8 @@ btns.forEach((btn) =>{
 
             imgSerio.classList.remove("active")
             imgSerio.classList.add("hidden")
-          }
-          if (num < 0) {
+        }
+        if (num < 0) {
             value.style.color = "red"
             imgEnojado.classList.add("active")
             imgEnojado.classList.remove("hidden")
@@ -43,8 +43,8 @@ btns.forEach((btn) =>{
             imgSerio.classList.remove("active")
             imgSerio.classList.add("hidden")
 
-          }
-          if (num === 0) {
+        }
+        if (num === 0) {
             value.style.color = "#222";
             imgSerio.classList.add("active")
             imgSerio.classList.remove("hidden")
@@ -54,7 +54,7 @@ btns.forEach((btn) =>{
 
             imgEnojado.classList.remove("active")
             imgEnojado.classList.add("hidden")
-          } 
+        }
     })
 
 });
